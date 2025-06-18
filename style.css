@@ -452,6 +452,187 @@ section {
   animation: showText 0.5s 1s linear forwards;
   opacity: 0;
 }
+/* .main-text {
+  padding-top: 130px;
+  margin-top: 200px;
+}
+.main-text h2 {
+  font-size: 60px;
+  line-height: 1;
+  text-align: center;
+}
+.main-texth2 span {
+  color: #0ef;
+}
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(359px, auto));
+}
+.row {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.row img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.5s;
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #0ef);
+  position: absolute;
+  border-radius: 8px;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 40px;
+  transition: height 0.5s;
+}
+.layer h5 {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.layer p {
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.layer i {
+  color: #ff004f;
+  margin-top: 20px;
+  font-size: 20px;
+  background: #e0e0e0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.row:hover img {
+  transform: scale(1.1);
+}
+row:hover .layer {
+  height: 100%;
+} */
+.main-text {
+  padding-top: 130px;
+  margin-top: 200px;
+}
+.main-text h2 {
+  font-size: 60px;
+  line-height: 1;
+  text-align: center;
+}
+.main-text h2 span {
+  color: #0ef;
+}
+
+.portfolio-content {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.row {
+  min-width: 400px;
+  max-height: 350px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.row img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.layer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  max-height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #0ef);
+  border-radius: 8px;
+  color: white;
+  overflow-y: auto;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  scrollbar-width: thin; /* Firefox scrollbar style */
+}
+
+.layer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.layer::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.layer h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.layer p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: white;
+}
+
+.layer i {
+  color: #ff004f;
+  margin-top: 20px;
+  font-size: 20px;
+  background: #e0e0e0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row:hover img {
+  transform: scale(1.1);
+}
+
+.row:hover .layer {
+  height: 100%;
+  opacity: 1;
+}
+
 @keyframes slideRight {
   0% {
     transform: translateX(-100px);
